@@ -1,0 +1,310 @@
+*{   
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif ; 
+}
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../dependables/General Images & Icons/background.svg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+}
+.main{
+    position:relative;
+    height:auto; width:100vw-50px; 
+    margin : 0px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.CITY{
+    position: relative;
+    display:flex;
+}
+.Timebox{
+    display: flex;
+}
+.timeNdate{
+    position: relative;
+    top:150px;
+    left:-185px; 
+    min-width:100px; 
+} 
+.am{
+    position: relative;
+    top:125px;
+    left:-55px;
+}
+.city_ICON{
+    position: relative;
+    top:30px;
+    left:-140px;
+}
+.cities{
+    cursor:pointer; text-align-last:center;
+    font-size: 1.3rem; border-radius: 4px;
+    color:white;
+    opacity:0.4;
+    background-color: gray; 
+    position :relative;
+    width:165px;
+    height:50px;
+    top:65px;
+    left:130px;
+}
+.temp{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    font-size: 2rem;
+    top:50px; left:-90px; 
+    min-width: 120px;   
+}
+.box_container{
+    position:relative;
+    display:flex;
+    justify-content: row;
+}
+.splitter{
+    position: relative;
+    display:flex;
+    justify-content:column ;
+    left:-75px; top:60px;
+    
+}
+.s1{ 
+    position: relative;
+    height:60px; width:2px;    
+    
+    background-color: lightgray; opacity: 0.5;   
+}
+.s2{ 
+    position: relative;
+    height:60px; width:2px;  
+    top:100px;
+    background-color: lightgray; opacity: 0.5;
+}
+.HumNprec{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    font-size: 2rem;
+    top:50px;
+    left:-35px;
+}
+.hourly{
+    position: relative;
+    display:flex;
+    height: 100px; width: 800px;
+    top:75px;
+    display:flex;
+    justify-content: space-around;
+}
+.brk{
+    position: relative;
+    top:30px;
+    height:25px; width:1.5px;
+    background-color: linen;
+}
+.hourly #period{
+    color:white;
+}
+.hourly #line{
+    height:25px; width:1.5px;
+    background-color: linen;
+    margin:10px;
+    left:15px; top:10px;
+}
+.hourly #image{
+    top:20px;
+}
+.hourly #htemp{
+    position: relative;
+    color:white;
+    top:15; left:10px;
+} 
+.hourly:nth-child(odd){
+    #htemp{
+        top:50px;
+    }
+}
+
+/* ----------- Second Division -----------*/
+
+.second{
+    position:relative; 
+    flex-wrap:wrap;
+    height:450px; top:120px; 
+    border-radius:15px 15px 0px 0px;
+    background-color:black;
+    width:100%;
+}
+
+#prefIcons{
+    color:white; padding:15px;
+    position: relative;
+    height:20px;
+    display:flex;
+    justify-content:center;
+}
+#prefIcons >div{
+    padding: 2px;
+}
+#prefIcons #sun ,#prefIcons #snow , #prefIcons #rain {
+    top:2px;
+    cursor: pointer;
+    min-width:50px;
+}
+#prefIcons #sun:active,#prefIcons #snow:active , #prefIcons #rain:active {
+    border-bottom:1.5px solid rgba(8, 103, 228, 0.637);
+    
+}
+#prefIcons #top_ip{
+    position: relative;
+    background-color: gray;
+    width:35px; height:15px;
+    border:none; top:2px; left:3px;
+}
+.topcities{
+    position: relative;
+    display:flex; 
+    justify-content: space-around;
+    flex-wrap: no-wrap;
+    color:white;
+    width:100vw-50px;
+    overflow:auto;
+}
+
+.topcities .city{
+    height:300px; width:285px;  
+    background: url('../dependables/Icons for cities/kolkata.svg') 95px 95px/ 250px,rgba(50,50,50,0.7);
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+    position: relative;
+    background-repeat: no-repeat;    
+    opacity:0.7;
+}
+.topcities .un{
+    background: url('../dependables/Icons for cities/newyork.svg') 95px 95px/ 250px,rgba(50,50,50,0.7);
+    background-repeat: no-repeat;
+}
+.topcities .deux{
+    background: url('../dependables/Icons for cities/auckland.svg') 95px 95px/ 250px,rgba(50,50,50,0.7);
+    background-repeat: no-repeat;
+}
+.topcities .trois{    
+    background: url('../dependables/Icons for cities/losangeles.svg') 95px 95px/ 250px,rgba(50,50,50,0.7);
+    background-repeat: no-repeat;
+}
+.topcities .quatre{    
+    background: url('../dependables/Icons for cities/moscow.svg') 95px 95px/ 250px,rgba(50,50,50,0.7);
+    background-repeat: no-repeat;    
+}
+.topcities .city:hover{
+    opacity: 1;
+    transform: scale(0.95,0.95);
+}
+.topcities .citname{
+    font-size: larger;
+}
+.topcities .flex1-items{
+    padding: 8px;
+    min-width: 100px;
+    height:200px;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.topcities .flex2-items{
+    display: flex; position: relative;
+    height:30px;
+    width:190px; 
+    justify-content: flex-end;
+    top:12px;
+}
+.topcities #citweat{
+    position: relative;
+    top:-5px; left:-5px;
+    width:25px;
+}
+.un .cittime{
+    min-width: 70px;;
+}
+#citimg{
+    align-self: end;
+    position: relative;
+    height:140px;
+}
+ /* ----------- Third Section -----------*/
+ .third{
+    position:relative; 
+    height:500px; top:45px; 
+    background-color:black;
+    width:100%;
+ }
+ .worldmenu{
+     position: relative;
+     color:white;
+     width:calc(100% - 40px);
+     display:flex;
+     justify-content: space-between;
+ }
+ .worldtext{
+     min-width: 350px;
+ }
+ .updown{
+     min-width:300px;
+     display:flex;
+     justify-content:space-around;
+ }
+ .updown .arrow{
+     height:20px;
+ }
+ .worldtext{
+     font-size: larger;
+ }
+ .grid_boxes{
+     position: relative;
+     top:30px;
+     height:400px;
+     display: grid;
+     grid-template-columns: auto auto auto;
+     grid-gap: 20px 65px;
+     overflow: initial;
+     max-width: 100vw;
+     
+ }
+ .grid_boxes .box{
+     position: relative;
+     color:white;
+     background-color: rgb(36, 31, 31);
+     padding:7px;
+     display:grid;
+     grid-template-columns: auto auto;
+     opacity:0.8;
+ }
+ .box .gridconti{
+     color:yellow;
+ }
+ .box .gridtemp{
+     position: relative;
+     font-weight: bold;
+     font-size: larger; 
+     text-align: end;
+ }
+ .box .gridhumi{
+     text-align: end;
+ }
+ .box >div{
+     display:inline-table;
+     text-align: initial;
+ }
+ .grid_boxes .box:hover{
+    opacity:1;
+    transform : scale(0.95,0.95);
+ }
+
+
+
