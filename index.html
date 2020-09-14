@@ -1,289 +1,233 @@
-<html>
-    <head>
-        <title>Weather monitoring site</title>
-        <link rel="stylesheet" href="css\index.css">
-        <link rel="shortcu icon" type="image/png" href="dependables\General Images & Icons\weather.png">
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <title>Weather monitoring site</title>
+    <link rel="stylesheet" href="css\index.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="dependables\General Images & Icons\weather.png"
+    />
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     </head>
-    <body>
-        <div class="main" >
-            <div class="CITY">
-                <select class="cities" value="Kolkatha" >
-                    <option value="anadyr">Anadyr</option>
-                    <option value="auckland" >Auckland</option>
-                    <option value="bangkok">Bangkok</option>
-                    <option value="brokenhill">Brokenhill</option>
-                    <option value="dublin">Dublin</option>
-                    <option value="jamaica">Jamaica</option>
-                    <option value="juba">Juba</option>
-                    <option value="karachi">Karachi</option>
-                    <option value="kolkata" selected>Kolkata</option>
-                    <option value="london">London</option>
-                    <option value="losangeles">Los Angeles</option>
-                    <option value="maseru">Maseru</option>
-                    <option value="moscow">Moscow</option>
-                    <option value="newyork">New York</option>
-                    <option value="nome">Nome</option>
-                    <option value="perth">Perth</option>
-                    <option value="seoul">Seoul</option>
-                    <option value="troll">Troll</option>
-                    <option value="vienna">Vienna</option>
-                    <option value="votok">Votok</option>
-                    <option value="winnipeg">Winnipeg</option>
-                    <option value="yangon">Yangon</option>
-                </select>
-                <img class="city_icon"
-                    src="dependables\Icons for cities\kolkata.svg" 
-                    height=90px
-                    width=90px
-                    alt="City ICON"
-                    />     
-                <div class="Timebox">     
-                    <img class="am"
-                        src="dependables\General Images & Icons\amState.svg"
-                        height=50px width=50px
-                        alt="An svg image"
-                    />
-                    <div class="timeNdate">
-                        <p><span id="time" style="color:#FFF461;font-weight:bolder;font-size: larger;">10:10:</span><span style="color:#FFF461;font-weight:bold;font-size: smaller">44</span></span></p>
-                        <p><span style="color:white">01-Mar-2020</span></p>
-                    </div>
-                </div>
-                     
-                <div class="box_container">
-                    <div class="temp">
-                        <label for="c" style="color:lightgray;font-size:smaller">Temp °C</label>
-                        <div class="c" id="c" style="color:white;font-size:inherit">25</div><br>
-                        <label for="f" style="color:lightgray;font-size:smaller">Temp °F</label>
-                        <div class="f" id="f" style="color:white;font-size:inherit">73</div>
-                    </div>
-                    <div class="splitter">
-                        <div class="s1"></div><br>
-                        <div class="s2"></div>
-                    </div>
-                    <div class="HumNprec">
-                        <label for="humidity" style="color:lightgray;font-size:smaller">Humidity</label>
-                        <div class="humidity" id="humidity" style="color:white;font-size:inherit">26<span style="color:gray">%</span></div><br>
-                        <label for="precipitation" style="color:lightgray;font-size:smaller">precipitation</label>
-                        <div class="precipitation" id="precipitation" style="color:white;font-size:inherit">0<span style="color:gray">%</span></div>
-                    </div>
-                </div>
-            </div>
-            <div class="hourly">
-                <div class="now">
-                    <div id="period">NOW</div>
-                    <div id="line"></div>
-                    <div id="image"><img src="dependables/Weather Icons/cloudyIcon.svg"></div>
-                    <div id="htemp">6</div>
-                </div>
-                <div class="1 brk"></div>
-                <div class="plusone">
-                    <div id="period">11 AM </div>
-                    <div id="line"></div>
-                    <div id="image"><img src="dependables/Weather Icons/rainyIcon.svg"></div>
-                    <div id="htemp">7</div>
-                </div>
-                <div class="2 brk"></div>
-                <div class="plustwo">
-                    <div id="period">12 PM</div>
-                    <div id="line"></div>
-                    <div id="image"><img src="dependables/Weather Icons/windyIcon.svg"></div>
-                    <div id="htemp">7</div>
-                </div>
-                <div class="3 brk"></div>
-                <div class="plusthree"> 
-                    <div id="period">1 PM</div>
-                    <div id="line"></div>
-                    <div id="image"><img src="dependables/Weather Icons/rainyIcon.svg"></div>
-                    <div id="htemp">8</div>
-                </div>
-                <div class="4 brk"></div>
-                <div class="plusfour">
-                    <div id="period">2 PM</div>
-                    <div id="line"></div>
-                    <div id="image"><img src="dependables/Weather Icons/windyIcon.svg"></div>
-                    <div id="htemp">8</div>
-                </div>
-                <div class="5 brk"></div>
-                <div class="plusfive">
-                    <div id="period">3 PM</div>
-                    <div id="line"></div>
-                    <div id="image"><img src="dependables/Weather Icons/rainyIcon.svg"></div>
-                    <div id="htemp">6</div>
-                </div>
-            </div>   
-        </div>  
-           
-    
-        
+  <body>
+    <div class="main">
+      <!--The first section where selected city is displayed -->
+      <div class="CitySection">
+        <img
+          class="cityIcon"
+          src="dependables\Icons for cities\Kolkata.svg"
+          alt="City ICON"
+        />
+        <label for="city" class="cityLabel">City names</label>
+        <input id="city" list="cities" value="Kolkata" title="Select the needed City"/>
+        <datalist id="cities" value="kolkata">
+          <option value="Anadyr"></option>
+          <option value="Auckland"></option>
+          <option value="BangKok"></option>
+          <option value="BrokenHill"></option>
+          <option value="Dublin"></option>
+          <option value="Jamaica"></option>
+          <option value="Juba"></option>
+          <option value="Karachi"></option>
+          <option value="Kolkata" selected></option>
+          <option value="London"></option>
+          <option value="LosAngeles"></option>
+          <option value="Maseru"></option>
+          <option value="Moscow"></option>
+          <option value="NewYork"></option>
+          <option value="Nome"></option>
+          <option value="Perth"></option>
+          <option value="Seoul"></option>
+          <option value="Troll"></option>
+          <option value="Vienna"></option>
+          <option value="Vostok"></option>
+          <option value="Winnipeg"></option>
+          <option value="Yangon"></option>
+        </datalist>
+        <div class="tempCSection">
+          <label for="c">Temp °C</label>
+          <div class="c">25 C</div>
+          <br />
+        </div>
+        <div class="wholeHumidity">
+          <label for="humidity">Humidity</label>
+          <div class="humidity" id="humidity">26%</div>
+          <br />
+        </div>
+        <div class="blank"></div>
+
+        <div class="timeBox">
+          <!--The date and time -->
+          <div class="timeNdate">
+            <span id="time">: : </span><span id="timeSec">00</span>
+            <div class="preDate">DD-MM-YYYY</div>
+          </div>
+          <img
+            class="am"
+            src="dependables\General Images & Icons\amState.svg"
+            alt="An svg image"
+          />
+        </div>
+        <div class="tempFSection">
+          <label for="f">Temp °F</label>
+          <div class="f">73 F</div>
+        </div>
+        <div class="wholePrecip">
+          <label for="precipitation">Precipitation</label>
+          <div class="precipitation">5%</div>
+        </div>
+        <!--Displays the temperature,humidity and precipitation parameter-->
+      </div>
+      <!--Displays the temperature,humidity and precipitation parameter-->
+      <div class="hourly">
+        <div class="now">
+          <div id="period">NOW</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="dependables/Weather Icons/cloudyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">6</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">11 AM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="dependables/Weather Icons/rainyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">7</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">12 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="dependables/Weather Icons/windyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">7</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">1 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="dependables/Weather Icons/rainyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">8</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">2 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="dependables/Weather Icons/windyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">8</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">3 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="dependables/Weather Icons/rainyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">6</div>
+        </div>
+      </div>
+    </div>
 
     <!-- -------------------Second Box------------------ -->
 
     <div class="second">
-            <div id="prefIcons" >
-                <div id="tc" >Top cities around the world!</div>
-                <img id="sun" src="dependables\Weather Icons\sunnyIcon.svg">
-                <img id="snow" src="dependables\Weather Icons\snowflakeIcon.svg">
-                <img id="rain" src="dependables\Weather Icons\rainyIcon.svg">
-                <div id="topnum" style="color:gray";>Display Top</div>
-                <input id="top_ip" type="number" value="4"  step="1" min="3" max="10">
-            </div>
-            <div class="topcities">
-                <div class="un city"> 
-                    <div class="flex1-items">                  
-                        <div class="citname">New york</div>
-                        <div class="cittime">10:00 AM</div>
-                        <div class="citdate">2-MAR-2020</div>
-                        <div class="cithum"><img src="dependables/Weather Icons/humidityIcon.svg">5%
-                        </div>
-                        <div class="citwind"><img src="dependables/Weather Icons/precipitationIcon.svg">10%</div>
-                    </div>
-                    <div class="flex2-items">
-                        <img id="citweat" src="dependables/Weather Icons/sunnyIcon.svg">
-                        <div class="deg">18 °C</div>
-                    </div>
-                </div>
-                <div class="deux city">
-                    <div class="flex1-items">                  
-                        <div class="citname">Auckland</div>
-                        <div class="cittime">10:00 AM</div>
-                        <div class="citdate">2-MAR-2020</div>
-                        <div class="cithum"><img src="dependables/Weather Icons/humidityIcon.svg">5%
-                        </div>
-                        <div class="citwind"><img src="dependables/Weather Icons/precipitationIcon.svg">10%</div>
-                    </div>
-                    <div class="flex2-items">
-                        <img id="citweat" src="dependables/Weather Icons/sunnyIcon.svg">
-                        <div class="deg">21 °C</div>
-                    </div>
-                </div>
-                <div class="trois city">
-                    <div class="flex1-items">                  
-                        <div class="citname">Los Angeles</div>
-                        <div class="cittime">10:00 AM</div>
-                        <div class="citdate">2-MAR-2020</div>
-                        <div class="cithum"><img src="dependables/Weather Icons/humidityIcon.svg">5%
-                        </div>
-                        <div class="citwind"><img src="dependables/Weather Icons/precipitationIcon.svg">10%</div>
-                    </div>
-                    <div class="flex2-items">
-                        <img id="citweat" src="dependables/Weather Icons/sunnyIcon.svg">
-                        <div class="deg">26 °C</div>
-                    </div>
-                </div>
-                <div class="quatre city">
-                    <div class="flex1-items">                  
-                        <div class="citname">Moscow</div>
-                        <div class="cittime">10:00 AM</div>
-                        <div class="citdate">2-MAR-2020</div>
-                        <div class="cithum"><img src="dependables/Weather Icons/humidityIcon.svg">5%
-                        </div>
-                        <div class="citwind"><img src="dependables/Weather Icons/precipitationIcon.svg">10%</div>
-                    </div>
-                    <div class="flex2-items">
-                        <img id="citweat" src="dependables/Weather Icons/sunnyIcon.svg">
-                        <div class="deg">15 °C</div>
-                    </div>
-                </div>
-            </div>
+      <div class="userIt">
+        <div id="tc">Top cities around the world!</div>
+        <div id="prefIcons">
+          <!--User preference row-->
+          <img
+            id="sun"
+            src="dependables\Weather Icons\sunnyIcon.svg"
+            alt="sun" title="Click to display Sunny Cities"
+          />
+          <img
+            id="snow"
+            src="dependables\Weather Icons\snowflakeIcon.svg"
+            alt="snow" title="Click to display Snowy Cities"
+          />
+          <img
+            id="rain"
+            src="dependables\Weather Icons\rainyIcon.svg"
+            alt="rain" title="Click to display Rainy Cities"
+          />
+          <!--<div id="topnum" style="color:gray";>Display Top</div>
+                     -->
+          <label for="top_ip" id="topnum" >Display Top</label>
+          <input
+            id="top_ip" type="number"
+            value="5" step="1"
+            min="3" max="10" 
+            title="Toggle to display needed quantity of citites"
+          />
         </div>
-        <!-- -------------------Third Box------------------ -->
-        <div class="third">
-            <div class="worldmenu">
-                <div class="worldtext">Cities across continents at a Glance!</div>
-                <div class="Updown">
-                    <div class="continent">Continent Name</div>
-                    <img class="down arrow" src="dependables/General Images & Icons/arrowDown.svg">
-                    <div class="Temperature">Temperature</div>
-                    <img class="up arrow" src="dependables/General Images & Icons/arrowUp.svg">
-                </div>
-            </div>
-            <div class="grid_boxes">
-                <div class="grid1 box">
-                    <div class="gridconti">Asia</div>
-                    <div class="gridtemp">32 °C</div>
-                    <div class="gridcity">Delhi,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div> 
-                <div class="grid2 box">
-                    <div class="gridconti">Europe</div>
-                    <div class="gridtemp">21 °C</div>
-                    <div class="gridcity">London,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div>
-                <div class="grid3 box">
-                    <div class="gridconti">America</div>
-                    <div class="gridtemp">18 °C</div>
-                    <div class="gridcity">Minneapolis,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div> 
-                <div class="grid4 box">
-                    <div class="gridconti">Asia</div>
-                    <div class="gridtemp">37 °C</div>
-                    <div class="gridcity">Chennai,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div>
-                <div class="grid5 box">
-                    <div class="gridconti">America</div>
-                    <div class="gridtemp">18 °C</div>
-                    <div class="gridcity">Detroit,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div> 
-                <div class="grid6 box">
-                    <div class="gridconti">Asia</div>
-                    <div class="gridtemp">31 °C</div>
-                    <div class="gridcity">Delhi,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                                    
-                </div>
-                <div class="grid7 box">
-                    <div class="gridconti">Asia</div>
-                    <div class="gridtemp">29 °C</div>
-                    <div class="gridcity">Kovai,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div> 
-                <div class="grid8 box">
-                    <div class="gridconti">Antartica</div>
-                    <div class="gridtemp">-15 °C</div>
-                    <div class="gridcity">Maitri,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                                    
-                </div>
-                <div class="grid9 box">
-                    <div class="gridconti">Africa</div>
-                    <div class="gridtemp">35 °C</div>
-                    <div class="gridcity">Egypt,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div> 
-                <div class="grid10 box">
-                    <div class="gridconti">Asia</div>
-                    <div class="gridtemp">27 °C</div>
-                    <div class="gridcity">Bangalore,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                                    
-                </div>
-                <div class="grid11 box">
-                    <div class="gridconti">Asia</div>
-                    <div class="gridtemp">35 °C</div>
-                    <div class="gridcity">Delhi,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                
-                </div> 
-                <div class="grid12 box">
-                    <div class="gridconti">Australia</div>
-                    <div class="gridtemp">35 °C</div>
-                    <div class="gridcity">Sydney,10:10 AM</div>
-                    <div class="gridhumi"><img src="dependables/Weather Icons/humidityIcon.svg">53%</div>
-                                    
-                </div>
-            </div>
+      </div>
+      <img
+        id="leftArrow"
+        src="dependables/General Images & Icons/backwardArrow.svg"
+        alt="Scroll left" title ="Click to move towards left"
+      />
+
+      <img
+        id="rightArrow"
+        src="dependables/General Images & Icons/forwardArrow.svg"
+        alt="Scroll right" title ="Click to move towards right"
+      />
+      <div class="topCities"><!--Top cities cards--></div>
+    </div>
+
+    <!-- -------------------Third Box------------------ -->
+
+    <div class="third">
+      <div class="worldmenu">
+        <!--World cities heading row-->
+        <div class="worldtext">Cities across continents at a Glance!</div>
+        <div class="Updown">
+          <div class="continentToggle">Continent Name
+          <img
+            class="contArrow"
+            src="dependables/General Images & Icons/arrowDown.svg"
+            alt="contArrow" title="Click to sort cities based on Continent names"
+          /></div>
+          <div class="temperatureToggle">Temperature
+          <img
+            class="tempArrow"
+            src="dependables/General Images & Icons/arrowUp.svg"
+            alt="tempArrow" title="Click to sort cities based on Temperature"
+          /></div>
         </div>
-    </body>
+      </div>
+      <div class="gridBoxes"><!--World cities grid layout--></div>
+    </div>
+    <script type="module" src="script\main.js"></script>
+    <script type="module" src="script\httpsfunctions.js"></script>
+  </body>
 </html>
+<!--      ENd      -->
