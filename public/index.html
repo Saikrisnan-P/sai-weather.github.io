@@ -1,0 +1,233 @@
+<html lang="en">
+  <head>
+    <title>Weather monitoring site</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="assets\General Images & Icons\weather.png"
+    />
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    /> -->
+    </head>
+  <body>
+    <div class="main">
+      <!--The first section where selected city is displayed -->
+      <div class="CitySection">
+        <img
+          class="cityIcon"
+          src="assets\Icons for cities\Kolkata.svg"
+          alt="City ICON"
+        />
+        <label for="city" class="cityLabel">City names</label>
+        <input id="city" list="cities" value="Kolkata" title="Select the needed City"/>
+        <datalist id="cities" value="kolkata">
+          <option value="Anadyr"></option>
+          <option value="Auckland"></option>
+          <option value="BangKok"></option>
+          <option value="BrokenHill"></option>
+          <option value="Dublin"></option>
+          <option value="Jamaica"></option>
+          <option value="Juba"></option>
+          <option value="Karachi"></option>
+          <option value="Kolkata" selected></option>
+          <option value="London"></option>
+          <option value="LosAngeles"></option>
+          <option value="Maseru"></option>
+          <option value="Moscow"></option>
+          <option value="NewYork"></option>
+          <option value="Nome"></option>
+          <option value="Perth"></option>
+          <option value="Seoul"></option>
+          <option value="Troll"></option>
+          <option value="Vienna"></option>
+          <option value="Vostok"></option>
+          <option value="Winnipeg"></option>
+          <option value="Yangon"></option>
+        </datalist>
+        <div class="tempCSection">
+          <label for="c">Temp °C</label>
+          <div class="c">25 C</div>
+          <br />
+        </div>
+        <div class="wholeHumidity">
+          <label for="humidity">Humidity</label>
+          <div class="humidity" id="humidity">26%</div>
+          <br />
+        </div>
+        <div class="blank"></div>
+
+        <div class="timeBox">
+          <!--The date and time -->
+          <div class="timeNdate">
+            <span id="time">: : </span><span id="timeSec">00</span>
+            <div class="preDate">DD-MM-YYYY</div>
+          </div>
+          <img
+            class="am"
+            src="assets\General Images & Icons\amState.svg"
+            alt="An svg image"
+          />
+        </div>
+        <div class="tempFSection">
+          <label for="f">Temp °F</label>
+          <div class="f">73 F</div>
+        </div>
+        <div class="wholePrecip">
+          <label for="precipitation">Precipitation</label>
+          <div class="precipitation">5%</div>
+        </div>
+        <!--Displays the temperature,humidity and precipitation parameter-->
+      </div>
+      <!--Displays the temperature,humidity and precipitation parameter-->
+      <div class="hourly">
+        <div class="now">
+          <div id="period">NOW</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="assets/Weather Icons/cloudyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">6</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">11 AM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="assets/Weather Icons/rainyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">7</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">12 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="assets/Weather Icons/windyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">7</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">1 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="assets/Weather Icons/rainyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">8</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">2 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="assets/Weather Icons/windyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">8</div>
+        </div>
+        <div class="brk"></div>
+        <div class="now">
+          <div id="period">3 PM</div>
+          <div id="line"></div>
+          <img
+            id="image"
+            src="assets/Weather Icons/rainyIcon.svg"
+            alt="weather"
+          />
+          <div id="htemp">6</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------Second Box------------------ -->
+
+    <div class="second">
+      <div class="userIt">
+        <div id="tc">Top cities around the world!</div>
+        <div id="prefIcons">
+          <!--User preference row-->
+          <img
+            id="sun"
+            src="assets\Weather Icons\sunnyIcon.svg"
+            alt="sun" title="Click to display Sunny Cities"
+          />
+          <img
+            id="snow"
+            src="assets\Weather Icons\snowflakeIcon.svg"
+            alt="snow" title="Click to display Snowy Cities"
+          />
+          <img
+            id="rain"
+            src="assets\Weather Icons\rainyIcon.svg"
+            alt="rain" title="Click to display Rainy Cities"
+          />
+          <!--<div id="topnum" style="color:gray";>Display Top</div>
+                     -->
+          <label for="top_ip" id="topnum" >Display Top</label>
+          <input
+            id="top_ip" type="number"
+            value="5" step="1"
+            min="3" max="10" 
+            title="Toggle to display needed quantity of citites"
+          />
+        </div>
+      </div>
+      <img
+        id="leftArrow"
+        src="assets/General Images & Icons/backwardArrow.svg"
+        alt="Scroll left" title ="Click to move towards left"
+      />
+
+      <img
+        id="rightArrow"
+        src="assets/General Images & Icons/forwardArrow.svg"
+        alt="Scroll right" title ="Click to move towards right"
+      />
+      <div class="topCities"><!--Top cities cards--></div>
+    </div>
+
+    <!-- -------------------Third Box------------------ -->
+
+    <div class="third">
+      <div class="worldmenu">
+        <!--World cities heading row-->
+        <div class="worldtext">Cities across continents at a Glance!</div>
+        <div class="Updown">
+          <div class="continentToggle">Continent Name
+          <img
+            class="contArrow"
+            src="assets/General Images & Icons/arrowDown.svg"
+            alt="contArrow" title="Click to sort cities based on Continent names"
+          /></div>
+          <div class="temperatureToggle">Temperature
+          <img
+            class="tempArrow"
+            src="assets/General Images & Icons/arrowUp.svg"
+            alt="tempArrow" title="Click to sort cities based on Temperature"
+          /></div>
+        </div>
+      </div>
+      <div class="gridBoxes"><!--World cities grid layout--></div>
+    </div>
+    <script src="./main.js" type="module"></script>
+    <script src="./httpsfunctions.js" type="module"></script>
+  </body>
+</html>
+<!--      ENd      -->

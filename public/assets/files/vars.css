@@ -1,0 +1,16 @@
+:root {
+  --primary-white: #ffffff;
+  --primary-black: #121212;
+
+  --bg-grey-tile: #2e2e2e;
+  --bg-dark-grey-tile: #181818;
+  --bg-input-box: rgba(131, 131, 131, 0.25);
+  --bg-input-box-error: #4c2d2d;
+  --bg-selection-blue: #1e90ff;
+
+  --bright-red-border: #c10b00;
+  --light-blue-border: #00c0f1;
+
+  --bright-yellow-text: #fff461;
+  --pale-yellow-text: #ffe5b4;
+}
